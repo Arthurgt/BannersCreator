@@ -1,10 +1,44 @@
+.blue-text {
+  color: #039dff;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.brand-mobile {
+  font-size: 11px;
+  display: inline-block;
+}
+
+.brand-pc {
+  display: none;
+}
+
+.download {
+  font-size: 11px;
+}
+
+.nav-mobile a {
+  font-size: 11px;
+}
+
+.only-pc {
+  display: none;
+}
+
+.not-only-pc {
+  display: inline-block;
+}
+
 .banner {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
 
-.badge {
+.colors {
   cursor: pointer;
   display: inline-block;
   float: none;
@@ -50,4 +84,80 @@
 .verticalRev {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.page-footer {
+  background-color: black;
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 576px) {
+  .brand-mobile {
+    display: none;
+  }
+
+  .brand-pc {
+    font-size: 13px;
+    display: inline-block;
+  }
+  
+  .download {
+    font-size: 13px;
+  }
+  
+  .nav-mobile a {
+    font-size: 13px;
+  }
+
+  .page-footer {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .brand-pc {
+    font-size: 15px;
+  }
+  
+  .download {
+    font-size: 15px;
+  }
+  
+  .nav-mobile a {
+    font-size: 15px;
+  }
+
+  .page-footer {
+    font-size: 15px;
+  }
+
+  .only-pc {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .brand-pc {
+    font-size: 17px;
+  }
+  
+  .download {
+    font-size: 17px;
+  }
+  
+  .nav-mobile a {
+    font-size: 17px;
+  }
+
+  .page-footer {
+    font-size: 17px;
+  }
 }

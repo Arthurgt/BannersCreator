@@ -8,14 +8,16 @@ import domtoimage from 'dom-to-image';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  width = 600;
-  height = 500;
+  width = 320;
+  height = 420;
   color1 = 'red';
   color2 = 'yellow';
   percentColor1 = 0;
   percentColor2 = 100;
-  fontSize = 52;
+  fontSize = 20;
   fontColor = 'black';
+
+  config: { [key: string]: string | Date } = null;
 
   layout = {
     horizontal: false,
@@ -26,14 +28,19 @@ export class AppComponent {
 
   colors = [
     'red',
-    'purple',
     'blue',
     'green',
     'yellow',
-    'brown',
-    'grey',
     'black',
   ];
+
+  constructor() {
+    this.config = {
+      title: 'Banners Creator',
+      footer: '© Artur Babkiewicz build in Angular',
+      date: new Date()
+    };
+  }
 
   getBannerStyles() {
     return {

@@ -1,14 +1,13 @@
-<nav>
+<nav class="navigation">
   <div class="nav-wrapper black">
-    <a class="brand-logo">Banners Creator</a>
-    <a href="#" class="brand-logo center" (click)="saveImage(banner)">
-      Download
-    </a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a (click)="setLayout('horizontal')">Horizontal</a></li>
-      <li><a (click)="setLayout('horizontalRev')">Horizontal Reverse</a></li>
-      <li><a (click)="setLayout('vertical')">Vertical</a></li>
-      <li><a (click)="setLayout('verticalRev')">Vertical Reverse</a></li>
+    <a class="brand-mobile blue-text">BC</a>
+    <a class="brand-pc blue-text">Banners Creator</a>
+    <a href="#" class="download" (click)="saveImage(banner)">Download</a>
+    <ul id="nav-mobile" class="nav-mobile">
+      <li class="only-pc"><a (click)="setLayout('horizontal')">Horizontal</a></li>
+      <li class="only-pc"><a (click)="setLayout('horizontalRev')">Horizontal Reverse</a></li>
+      <li class="not-only-pc"><a (click)="setLayout('vertical')">Vertical</a></li>
+      <li class="not-only-pc"><a (click)="setLayout('verticalRev')">Vertical Reverse</a></li>
     </ul>
   </div>
 </nav>
@@ -50,4 +49,10 @@
       <span class="badge" *ngFor="let color of colors" [ngClass]="color" (click)="fontColor = color"></span>
     </div>
   </div>
+</div>
+
+<div class="container-fluid">
+  <footer class="page-footer mt-5 p-20 center">
+      <div class="container blue-text">{{ config?.date | date: 'yyyy' }}{{ config?.footer }}</div>
+  </footer>
 </div>
