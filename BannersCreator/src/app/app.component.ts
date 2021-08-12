@@ -15,6 +15,7 @@ export class AppComponent {
   percentColor1 = 0;
   percentColor2 = 100;
   fontSize = 52;
+  fontColor = 'black';
 
   layout = {
     horizontal: false,
